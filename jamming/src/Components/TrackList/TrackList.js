@@ -1,14 +1,20 @@
 import React from 'react';
 import './TrackList.css';
+import '../SearchResults/SearchResults'
 
 class TrackList extends React.Component {
+    constructor (props) {
+        super (props);
+        
+    }
     render() {
         return (
             <div className="TrackList">
-                <ul>
-                    <li>Iron Maidan - Fear of the Dark</li>
-                </ul>
-                {/* {return this.props.tracks.map(Track.track)} */}
+              {
+                  this.props.tracks.map(track => {
+                      return <Track />
+                  })
+              }
             </div>
         )
     }
